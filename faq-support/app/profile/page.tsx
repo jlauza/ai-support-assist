@@ -20,7 +20,7 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 
 export default function ProfilePage() {
   const [enabled, setEnabled] = useState(false);
-  const [signInMethod, setSignInMethod] = useState("google");
+  // const [signInMethod, setSignInMethod] = useState("google");
 
   return (
     <AppShell title="Profile Settings">
