@@ -20,7 +20,7 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 
 export default function ProfilePage() {
   const [enabled, setEnabled] = useState(false);
-  // const [signInMethod, setSignInMethod] = useState("google");
+  const [signInMethod, setSignInMethod] = useState("google");
 
   return (
     <AppShell title="Profile Settings">
@@ -86,12 +86,14 @@ export default function ProfilePage() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="google">
-                    <span className="flex items-center gap-2">
-                      <FaGoogle />
-                      Google
-                    </span>
-                  </SelectItem>
+                  {signInMethod === "google" && (
+                    <SelectItem value="google">
+                      <span className="flex items-center gap-2">
+                        <FaGoogle />
+                        Google
+                      </span>
+                    </SelectItem>
+                  )}
                   <SelectItem value="github">
                     <span className="flex items-center gap-2">
                       <FaGithub />
